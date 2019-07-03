@@ -9,4 +9,4 @@
 #SBATCH -a 1-18
 module load anaconda3
 source activate eclips_venv
-python ~/Documents/Research/repos/eclips/eclips/models/poppy/compute_jacobian.py @params/params$SLURM_ARRAY_TASK_ID
+python ~/Documents/repos/eclips/eclips/simulations/poppy/compute_jacobian.py @params/params$SLURM_ARRAY_TASK_ID

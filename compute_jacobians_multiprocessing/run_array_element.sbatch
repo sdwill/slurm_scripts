@@ -20,4 +20,4 @@ source activate eclips_venv
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
 
-python ~/Documents/Research/eclips/eclips/simulations/poppy/compute_jacobian.py "$FILENAME"
+python ~/Documents/repos/eclips/eclips/simulations/poppy/compute_jacobian.py "$FILENAME"

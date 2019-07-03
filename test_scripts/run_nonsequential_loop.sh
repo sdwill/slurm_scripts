@@ -6,7 +6,7 @@
 #     array+=("$REPLY")
 # done < <(find configs/ -type f -print0)
 
-export FILES=($(find ~/Documents/Research/repos/eclips/eclips/models/poppy/configs/ -type f))
+export FILES=($(find ~/Documents/repos/eclips/eclips/models/poppy/configs/ -type f))
 NUMFASTQ=${#FILES[@]}  # Get size of array
 
 # now subtract 1 as we have to use zero-based indexing (first cell is 0)

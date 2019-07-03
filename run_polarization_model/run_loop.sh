@@ -1,7 +1,7 @@
 #!/bin/bash
 module load anaconda3
 source activate eclips_venv
-cd ~/Documents/Research/repos/eclips/eclips/models/poppy
+cd ~/Documents/repos/eclips/eclips/models/poppy
 
 for file in $(find configs/ -type f)
 do

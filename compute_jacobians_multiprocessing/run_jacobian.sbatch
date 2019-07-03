@@ -11,4 +11,4 @@ export OMP_NUM_THREADS=1
 module load anaconda3
 module load texlive
 source activate eclips_venv
-python ~/Documents/Research/eclips/eclips/simulations/poppy/compute_jacobian.py configs/300nm.ini
+python ~/Documents/repos/eclips/eclips/simulations/poppy/compute_jacobian.py configs/300nm.ini

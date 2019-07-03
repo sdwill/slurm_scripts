@@ -17,5 +17,5 @@ module load texlive
 
 source activate eclips_venv
 cat configs/300nm.ini
-cat ~/Documents/Research/eclips/eclips/simulations/poppy/run_polarization_model.py
-python ~/Documents/Research/eclips/eclips/simulations/poppy/run_polarization_model.py configs/300nm.ini
+cat ~/Documents/repos/eclips/eclips/simulations/poppy/run_polarization_model.py
+python ~/Documents/repos/eclips/eclips/simulations/poppy/run_polarization_model.py configs/300nm.ini

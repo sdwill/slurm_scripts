@@ -20,19 +20,19 @@ START_DIR = $(pwd)
 
 
 # Install local packages
-cd ~/Documents/Research/proper
+cd ~/Documents/repos/proper
 python setup.py develop
 
-cd ~/Documents/Research/wfscore
+cd ~/Documents/repos/wfscore
 python setup.py develop
 
-cd ~/Documents/Research/poppy-st
+cd ~/Documents/repos/poppy-st
 python setup.py develop
 
-cd ~/Documents/Research/yapp
+cd ~/Documents/repos/yapp
 python setup.py develop
 
-cd ~/Documents/Research/eclips
+cd ~/Documents/repos/eclips
 python setup.py develop
 
 # Clean up

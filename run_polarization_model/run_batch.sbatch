@@ -10,5 +10,5 @@
 module load anaconda3
 source activate eclips_venv
 module load texlive
-cd ~/Documents/Research/repos/eclips/eclips/models/poppy
+cd ~/Documents/repos/eclips/eclips/models/poppy
 python run_polarization_model.py configs/config_${SLURM_ARRAY_TASK_ID}.ini
