@@ -15,11 +15,10 @@
 export OMP_NUM_THREADS=1
 module load anaconda3
 module load texlive
-source activate eclips_venv
 
 which python
 
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
 
-python ~/Documents/repos/eclips/eclips/simulations/poppy/compute_jacobian.py "$FILENAME"
+~/.conda/envs/eclips_venv/bin/python ~/Documents/repos/eclips/eclips/simulations/poppy/compute_jacobian.py "$FILENAME"
