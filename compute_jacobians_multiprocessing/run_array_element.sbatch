@@ -13,10 +13,12 @@
 
 # grab out filename from the array exported from our 'parent' shell
 export OMP_NUM_THREADS=1
+export GIT_PYTHON_GIT_EXECUTABLE=~/.conda/envs/eclips_venv/bin/git
+
 module load anaconda3
-module load git
 module load texlive
 
+echo $GIT_PYTHON_GIT_EXECUTABLE
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
 
