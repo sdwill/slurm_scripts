@@ -14,9 +14,8 @@
 # grab out filename from the array exported from our 'parent' shell
 export OMP_NUM_THREADS=1
 module load anaconda3
+module load git
 module load texlive
-
-which python
 
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
