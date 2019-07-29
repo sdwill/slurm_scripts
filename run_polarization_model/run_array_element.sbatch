@@ -18,4 +18,4 @@ source activate eclips_venv
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
 
-python ~/Documents/repos/eclips/eclips/simulations/poppy/run_polarization_model.py "$FILENAME"
+python ~/Documents/repos/eclips/eclips/simulations/basic/run_basic_lc_full_jones.py "$FILENAME"
