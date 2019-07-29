@@ -13,10 +13,9 @@
 # grab out filename from the array exported from our 'parent' shell
 module load anaconda3
 module load texlive
-source activate eclips_venv
 export GIT_PYTHON_GIT_EXECUTABLE=~/.conda/envs/eclips_venv/bin/git
 
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
 
-python ~/Documents/repos/eclips/eclips/simulations/poppy/compute_contrast_sam.py "$FILENAME"
+~/.conda/envs/eclips_venv/bin/python ~/Documents/repos/eclips/eclips/simulations/poppy/compute_contrast_sam.py "$FILENAME"
