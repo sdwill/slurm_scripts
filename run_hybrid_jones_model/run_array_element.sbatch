@@ -14,6 +14,7 @@
 module load anaconda3
 module load texlive
 source activate eclips_venv
+export GIT_PYTHON_GIT_EXECUTABLE=~/.conda/envs/eclips_venv/bin/git
 
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
