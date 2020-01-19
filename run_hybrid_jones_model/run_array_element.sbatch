@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J hybrid_jones_model   # A single job name for the array
+#SBATCH -J hybrid_jones   # A single job name for the array
 #SBATCH -n 1                    # Number of tasks
 #SBATCH -N 1                    # Number of nodes
 #SBATCH -t 0-24:00:00           # Maximum runtime
