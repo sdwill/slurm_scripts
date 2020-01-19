@@ -1,10 +1,9 @@
 #!/bin/bash
-#SBATCH -J jacobians            # A single job name for the array
-#SBATCH -n 1                    # number of tasks
-#SBATCH -c 6  			# Number of cpus per task (2 DMs * 3 control wavelengths)
-#SBATCH -N 1                    # number of nodes
-#SBATCH -t 1-24:00:00		# Max runtime
-#SBATCH --mem-per-cpu=16gb	# Memory per CPU
+#SBATCH -J aplc_field_stop   # A single job name for the array
+#SBATCH -n 1                    # Number of tasks
+#SBATCH -N 1                    # Number of nodes
+#SBATCH -t 0-24:00:00           # Maximum runtime
+#SBATCH --mem-per-cpu=32gb      # Memory request
 #SBATCH -o stdout/%A_%a.out     # Standard output
 #SBATCH -e stderr/%A_%a.err     # Standard error
 
@@ -12,14 +11,11 @@
 # and should not be called directly by the user.
 
 # grab out filename from the array exported from our 'parent' shell
-export OMP_NUM_THREADS=1
-export GIT_PYTHON_GIT_EXECUTABLE=~/.conda/envs/eclips_venv/bin/git
-
 module load anaconda3
 module load texlive
+export GIT_PYTHON_GIT_EXECUTABLE=~/.conda/envs/eclips_venv/bin/git
 
-echo $GIT_PYTHON_GIT_EXECUTABLE
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
 
-~/.conda/envs/eclips_venv/bin/python ~/Documents/repos/eclips/eclips/simulations/basic/run_basic_lc_scalar.py "$FILENAME"
+~/.conda/envs/eclips_venv/bin/python ~/Documents/repos/eclips/eclips/simulations/basic/run_basic_lc_scalar.py --config "$FILENAME"

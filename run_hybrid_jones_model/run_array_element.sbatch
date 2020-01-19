@@ -18,4 +18,4 @@ export GIT_PYTHON_GIT_EXECUTABLE=~/.conda/envs/eclips_venv/bin/git
 FILES=($(find configs/ -type f))
 FILENAME=${FILES[$SLURM_ARRAY_TASK_ID]}
 
-~/.conda/envs/eclips_venv/bin/python ~/Documents/repos/eclips/eclips/simulations/basic/run_basic_lc_hybrid_jones.py "$FILENAME"
+~/.conda/envs/eclips_venv/bin/python ~/Documents/repos/eclips/eclips/simulations/basic/run_basic_lc_hybrid_jones.py --config "$FILENAME"
