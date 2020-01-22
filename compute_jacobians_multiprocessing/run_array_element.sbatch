@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J jacobians            # A single job name for the array
 #SBATCH -n 1                    # number of tasks
-#SBATCH -c 24  			# Number of cpus per task (2 DMs * 3 control wavelengths)
+#SBATCH -c 12  			# Number of cpus per task (2 DMs * 3 control wavelengths)
 #SBATCH -N 1                    # number of nodes
 #SBATCH -t 1-24:00:00		# Max runtime
 #SBATCH --mem-per-cpu=16gb	# Memory per CPU
