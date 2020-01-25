@@ -3,7 +3,7 @@
 #SBATCH -n 1                    # Number of tasks
 #SBATCH -N 1                    # Number of nodes
 #SBATCH -t 0-24:00:00           # Maximum runtime
-#SBATCH --mem-per-cpu=32gb      # Memory request
+#SBATCH --mem-per-cpu=48gb      # Memory request
 #SBATCH -o stdout/%A_%a.out     # Standard output
 #SBATCH -e stderr/%A_%a.err     # Standard error
 
