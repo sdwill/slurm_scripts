@@ -2,8 +2,9 @@
 #SBATCH -J aplc_field_stop   # A single job name for the array
 #SBATCH -n 1                    # Number of tasks
 #SBATCH -N 1                    # Number of nodes
-#SBATCH -t 0-24:00:00           # Maximum runtime
-#SBATCH --mem-per-cpu=48gb      # Memory request
+#SBATCH -t 1-24:00:00           # Maximum runtime
+#SBATCH -c 2                    # Number of CPUs per node
+#SBATCH --mem-per-cpu=100gb      # Memory request
 #SBATCH -o stdout/%A_%a.out     # Standard output
 #SBATCH -e stderr/%A_%a.err     # Standard error
 
